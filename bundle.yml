@@ -21,4 +21,4 @@ resources:
         - task_key: start
           existing_cluster_id: 0905-203801-e5f0hgh4
           spark_jar_task:
-            jar: ./${bundle.environment}/input.py
+            jar: ./${bundle.environment}/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar
