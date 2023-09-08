@@ -22,5 +22,8 @@ jobs:
         run: sbt package
       - uses: databricks/setup-cli@main
       - run: databricks bundle validate
+        env:
+          DATABRICKS_TOKEN: ${{ secrets.DEV_DB_TOKEN }}
+          DATABRICKS_BUNDLE_ENV: dev
 
 
