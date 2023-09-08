@@ -17,7 +17,5 @@ lazy val Versions = new {
 libraryDependencies += "org.apache.spark" %% "spark-core" % Versions.spark
 libraryDependencies += "org.apache.spark" %% "spark-sql" % Versions.spark
 
-assemblyMergeStrategy in assembly := {
-  case PathList("META-INF", xs@_*) => MergeStrategy.discard
-  case x => MergeStrategy.first
-}
+
+
