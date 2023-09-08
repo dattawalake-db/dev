@@ -3,7 +3,7 @@ bundle:
   name: deploy_scala_jar_example
 
 workspace:
-  host: https://e2-demo-field-eng.cloud.databricks.com/
+  host: https://dbc-a49c6081-8a5a.cloud.databricks.com/
 
 
 
