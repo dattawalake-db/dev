@@ -21,9 +21,16 @@ jobs:
       - name: Build Jar
         run: sbt package
       - uses: databricks/setup-cli@main
+      - name: Upload Jar
+        uses: databricks/upload-dbfs-temp@v0
+        id: upload_app_jar
+        with:
+              local-path: 'target/scala-2.12/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar'
+
       - run: databricks bundle deploy
         env:
           DATABRICKS_TOKEN: ${{ secrets.DEV_DB_TOKEN }}
           DATABRICKS_BUNDLE_ENV: dev
+          FILE: 'target/scala-2.12/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar'
 
 
