@@ -7,7 +7,7 @@ workspace:
 
 
 environments:
-  development:
+  dev:
     default: true
 
 libraries:
