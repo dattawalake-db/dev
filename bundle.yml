@@ -4,7 +4,7 @@ bundle:
 
 workspace:
   host: https://e2-demo-field-eng.cloud.databricks.com/
-  token : 'dapiaefd52ad2776c392701419d401a7665c'
+  auth_type : databricks-cli
 
 
 environments:
