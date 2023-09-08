@@ -9,8 +9,7 @@ environments:
   dev:
     default: true
 
-libraries:
-  jar: "dbfs:/FileStore/tables/DABS-test-scala-jar/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar"
+
 
 resources:
   jobs:
@@ -19,6 +18,8 @@ resources:
 
       tasks:
         - task_key: start
+          libraries:
+            - file: "dbfs:/FileStore/tables/DABS-test-scala-jar/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar"
           existing_cluster_id: 0905-203801-e5f0hgh4
           spark_jar_task:
             jar: ./${bundle.environment}/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar
