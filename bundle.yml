@@ -5,18 +5,11 @@ bundle:
 workspace:
   host: https://dbc-a49c6081-8a5a.cloud.databricks.com/
 
+
 environments:
   development:
     default: true
 
-resources:
-  jobs:
-    my_job_with_jar_file_task:
-      name: "[${bundle.environment}] Job with a file task"
-      tasks:
-        - task_key: start
-          spark_jar_task:
-            libraries:
-              jar: "target/scala-2.12/scala-sbt-da_*.jar'"
-            main_class_name: "com.example.Main.Driver"
-          existing_cluster_id: 0905-203801-e5f0hgh4
+libraries:
+  jar: "dbfs:/FileStore/tables/DABS-test-scala-jar/scala-sbt-dab_2.12-0.1.0-SNAPSHOT.jar"
+
