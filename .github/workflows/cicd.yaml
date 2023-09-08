@@ -23,7 +23,7 @@ jobs:
       - uses: databricks/setup-cli@main
       - run: databricks bundle validate
         env:
-          DATABRICKS_TOKEN: dapiaefd52ad2776c392701419d401a7665c
+          DATABRICKS_TOKEN: 'dapiaefd52ad2776c392701419d401a7665c'
           DATABRICKS_BUNDLE_ENV: dev
 
 
