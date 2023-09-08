@@ -21,6 +21,6 @@ jobs:
       - name: Build Jar
         run: sbt package
       - uses: databricks/setup-cli@main
-      - run: databricks bundle deploy
+      - run: databricks bundle validate
 
 
