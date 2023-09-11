@@ -17,5 +17,8 @@ lazy val Versions = new {
 libraryDependencies += "org.apache.spark" %% "spark-core" % Versions.spark
 libraryDependencies += "org.apache.spark" %% "spark-sql" % Versions.spark
 
+artifactPath in packageBin in Compile := baseDirectory.value / "lib" / "scala-sbt-dab-app.jar"
+
+
 
 
